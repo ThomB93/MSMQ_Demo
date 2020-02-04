@@ -11,22 +11,22 @@ namespace MSMQ_Demo.MessageTo
         {
             InitializeComponent();
         }
-        private void button1_Click(object sender, EventArgs e)
-        {
 
+        private void button1_Click_1(object sender, EventArgs e)
+        {
             #region Create My Own Queue 
 
             MessageQueue messageQueue = null;
-            if (MessageQueue.Exists(@".\Private$\TestApp1"))
+            if (MessageQueue.Exists(@".\Private$\demo"))
             {
-                messageQueue = new MessageQueue(@".\Private$\TestApp1");
+                messageQueue = new MessageQueue(@".\Private$\demo");
                 messageQueue.Label = "MyQueueLabel";
             }
             else
             {
                 // Create the Queue
-                MessageQueue.Create(@".\Private$\TestApp1");
-                messageQueue = new MessageQueue(@".\Private$\TestApp1");
+                MessageQueue.Create(@".\Private$\demo");
+                messageQueue = new MessageQueue(@".\Private$\demo");
                 messageQueue.Label = "MyQueueLabel";
             }
 

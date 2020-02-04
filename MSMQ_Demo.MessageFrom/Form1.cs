@@ -40,9 +40,9 @@ namespace MSMQ_Demo.MessageFrom
         {
             try
             {
-                if (MessageQueue.Exists(@".\Private$\TestApp1"))
+                if (MessageQueue.Exists(@".\Private$\demo"))
                 {
-                    MessageQueue messageQueue = new MessageQueue(@".\Private$\TestApp1");
+                    MessageQueue messageQueue = new MessageQueue(@".\Private$\demo");
                     messageQueue.Formatter = new XmlMessageFormatter(new Type[] { typeof(MyMessage.MyMessage) });
 
 
